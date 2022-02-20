@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/characterImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toTopOf="@id/shareButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:background="@color/black"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/characterNameView"
+        android:layout_width="0sp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="CharacterName"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:fontFamily="sans-serif-black"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/shareButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline"
+        android:background="@color/myLightBlue"
+
+        />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="shareMarvelCharacter"
+        android:textSize="20sp"
+        android:padding="15dp"
+        android:text="@string/share"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        android:backgroundTint="@color/myRed"
+        />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="nextMarvelCharacter"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:padding="15dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        android:backgroundTint="@color/myDarkBlue"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <TextView
+        android:id="@+id/attributionView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="AttributionLine"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:backgroundTint="@color/myLightBlue"
+       />
+
+    <Button
+        android:id="@+id/detailButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Details"
+        android:textColor="@color/white"
+        android:onClick="showComicDetails"
+        android:textColorHighlight="#69F0AE"
+        app:layout_constraintBottom_toTopOf="@id/nextButton"
+        app:layout_constraintLeft_toLeftOf="@id/guideline75"
+        app:layout_constraintRight_toRightOf="parent"
+        android:backgroundTint="@color/myMidBlue"/>
+
+    <Button
+        android:id="@+id/comicsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginRight="1dp"
+        android:backgroundTint="@color/myMidBlue"
+        android:onClick="listAllComics"
+        android:text="Comics"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/nextButton"
+        app:layout_constraintLeft_toRightOf="@id/guideline"
+        app:layout_constraintRight_toLeftOf="@id/guideline75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
